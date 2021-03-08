@@ -1,0 +1,334 @@
+:root{
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #1abc9c;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #1abc9c;
+    --secondary: #2c3e50;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --main:#661a1a;
+    --mainHover:#3a0808;
+    --skyBlue:#009AFF;
+    --textBlack:#212529;
+}
+
+body{
+   
+    background-image:linear-gradient(90deg,rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/111.jpeg);
+
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    border: 1px solid rgb(161, 161, 161);
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+ background-color: var(--main);
+ border-radius: 15px;
+}
+
+/* ============= START Navbar =========================*/
+.navbar{
+    background-color: var(--main);
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999999999999999;
+}
+.navbar .navbar-brand img{
+   width: 33px;
+ 
+}
+.navbar a{
+    color: var(--light);
+}
+
+.navbar .dropdown svg{
+  color: var(--light);
+}
+.navbar .dropdown .dropdown-menu a{
+    color: #666;
+}
+
+.navbar ul li:nth-child(1):hover,
+.navbar ul li:nth-child(2):hover{
+    background-color: var(--mainHover);
+}
+.navbar ul li:nth-child(2){
+    margin-left: 9px;
+    width: 23%;
+}
+
+.navbar ul li:nth-child(2) img{
+    width: 18%;
+    /* height: 50px; */
+    border-radius: 50%;
+}
+.navbar ul li:nth-child(2) span{
+    font-size: 13px;
+}
+.navbar ul li button.signup:hover
+{
+ background-color: Var(--green);
+ border-color: var(--green);
+ color: var(--light);
+}
+
+.navbar ul li button.login:hover
+{
+    background-color: Var(--primary);
+    border-color: var(--primary);
+    color: var(--light);
+}
+
+.navbar ul li button.logout:hover
+{
+    background-color: Var(--mainHover);
+    border-color: var(--light);
+    color: var(--light);
+}
+
+.navbar form{
+    position: relative;
+}
+.navbar form input{
+    background-color: transparent;
+    border-bottom: 2px solid var(--light);;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.navbar form input:focus{
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 0.2rem transparent !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.navbar form input::-webkit-input-placeholder{
+    color:var(--light);
+}
+
+.navbar form input:focus::-webkit-input-placeholder{
+    color:#666
+}
+
+.navbar form  svg{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 20px;
+    color:var(--light);
+    cursor: pointer;
+}
+
+.navbar button{
+    color: var(--light);
+}
+
+/* ============= End Navbar =========================*/
+
+/* ========== Start Scrolltop ====================== */
+
+#scroll-top {
+    width:50px;
+    height:50px;
+    background-color:var(--main);
+    text-align:center;
+    position:fixed;
+    right:15px;
+    bottom:10px;
+    z-index:9999;
+    display:none;
+    cursor:pointer;
+    border-radius: 50%;
+    
+}
+#scroll-top .svg-inline--fa {
+    color:#fff; 
+}
+
+#scroll-top .svg-inline--fa:hover{color:var(--main); }
+
+#scroll-top:hover {background-color:#fff; }
+
+/* ========== End Scrolltop ====================== */
+
+/* ============ START HOME CONTENT ================*/
+
+.home-content{
+    background: #FFF;
+    position: relative;
+    z-index: 3;
+    margin: 57px 80px 0;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    padding-top:3% ;
+}
+
+
+.home-sidebar ul:first-child {
+    border-right: 1px solid #ccc;
+}
+
+.home-sidebar ul li{
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.home-sidebar ul li svg{
+    width: 23px;
+    height: 23px;
+    margin-right: 6px;
+    /* color: var(--main); */
+}
+
+.home-sidebar ul li:hover{
+ background-color: var(--main);
+ color: var(--light);
+ border-top-left-radius: 5px;
+ font-size: 18px;
+}
+
+/* ---     GRID           ------------------- */
+
+.home-content .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  
+.home-content .card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+  
+.home-content .card__header,
+.home-content .card__content {
+    padding: 1rem;
+  }
+.home-content .card__content{
+    cursor:default;
+}
+
+.home-content .card__content svg{
+ color: var(--main);
+}
+
+.home-content .card__header h1,
+.home-content .card__content h1,
+.home-content .card__content h2,
+.home-content .card__content p {
+    margin: 0;
+  }
+  
+.home-content .card__image {
+    width: 100%;
+  }
+  
+.home-content .card__image img {
+    width: 50%;
+    border-radius: 50%;
+    
+  }
+  
+.home-content  .card__actions {
+      padding: 1rem;
+      text-align: center;
+  }
+  
+.home-content .card__actions button,
+.home-content .card__actions a {
+      margin: 0 0.25rem;
+  }
+  
+.home-content .btn {
+    font: inherit;
+    border: 1px solid #00695c;
+    color: #00695c;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+  } 
+  
+.home-content  .btn:hover,
+.home-content  .btn:active {
+    background-color: #00695c;
+    color: white;
+  }
+  
+.home-content .product-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.home-content .Avatar{
+    width: 20rem;
+    max-width: 95%;
+    margin-bottom:15px ;
+}
+
+.home-content .Avatar__title {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.home-content .Avatar__title a{
+    text-decoration: none;
+    color:var(--dark);
+}.home-content .Avatar__title a:hover{
+    color: var(--primary);
+}
+
+.home-content .Avatar__description {
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* start responsive */
+
+@media(max-width:600px){
+    .home-content{
+       margin-right: 5px;
+        margin-left: auto;
+        overflow: hidden;
+       
+    }
+    
+    .home-content .post-area{
+        margin-left: 4px;
+        margin-top: 20px;
+        box-shadow: 5px 5px 10px #ccc;
+        
+    }
+    
+}

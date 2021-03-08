@@ -1,0 +1,228 @@
+
+.home-content{
+    margin-top: 20px;
+}
+
+.post-card-list{
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.home-sidebar ul li{
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    list-style: none;
+    border-bottom: 1px solid #f5f5f5;
+}
+.home-sidebar ul li:last-child{
+    border-bottom: none;
+}
+.home-sidebar ul li a{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    padding: .75rem 1.25rem;
+    color: #212529;
+    transition: all 0.25s ease-in-out;
+}
+
+.home-sidebar ul li a svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    /* color: var(--main); */
+}
+
+.home-sidebar ul li a:hover{
+    background-color: #f5f5f5;
+    padding-left: 1.5rem;
+}
+
+
+.home-content .post-area{
+    /* background-color:rgba(0, 0, 0, 0.1); */
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 30px 15px;
+    border-radius: 6px;
+    
+    
+}
+
+.home-content .post-area .post-body{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    /* border: 1px solid rgba(0,0,0,.325); */
+    border-radius: .25rem;
+    width: 100%;
+    padding: 10px;  
+    /* box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2); */
+}
+
+.home-content .post-area .post-body .post-info
+{
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 10px;
+    margin: 0 13px 15px;
+}
+.home-content .post-area .post-body .post-info a {
+    text-decoration: none;
+    color: var(--textBlack);
+}
+.home-content .post-area .post-body .post-info .type-item{
+    background-color: var(--main);
+    color: var(--white);
+    margin: auto;
+    border-radius: 4px;
+    padding: 3px 7px;
+    font-size: 10px;
+}
+.home-content .post-area .post-body .post-info a img
+{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.home-content .post-area .post-body .post-info a span
+{
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.home-content .post-area .post-body .post-info a:hover
+{
+    color: var(--main);
+    cursor: pointer;
+}
+
+
+.home-content .post-area .post-body p
+{
+    margin-left: 20px;
+}
+
+.home-content .post-area .post-body .post
+{
+    padding: 5px;
+    margin-top: -20px;
+
+}
+
+
+.home-content .post-area .post-body .post .post-height
+{
+    height: 300px;
+    width: 100%;
+}
+.home-content .post-area .post-body .post a
+{
+cursor: zoom-in;
+}
+.home-content .post-area .post-body .post img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.home-content .post-area .post-body .post-actions
+{
+    border-top: 1px solid #f5f5f5;
+    padding-top: 10px;
+    margin: 5px 13px 0;
+}
+
+.home-content .post-area .post-body .post-actions button
+{
+    margin-right: 5px ;
+
+}
+
+.home-content .post-area .post-body .post-actions button:focus{
+    outline: none;
+    box-shadow: none;
+    
+}
+
+/* .home-content .post-area .post-body .post-actions button:focus:first-child{
+   color: #fff;
+   background-color: #007bff;
+   border-color: #007bff;
+}
+
+.home-content .post-area .post-body .post-actions button:focus:last-child{
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+} */
+
+
+.home-content .post-area .post-body .post-actions button{
+    width: 120px;
+    margin-right: 5px;
+}
+.home-content .post-area .post-body .post-actions button.request-btn,
+.home-content .post-area .post-body .post-actions button.request-btn:active,
+.home-content .post-area .post-body .post-actions button.request-btn:hover,
+.home-content .post-area .post-body .post-actions button.request-btn:focus {
+    background-color: var(--main);
+    color: var(--white);
+    border-color: var(--main);
+}
+.home-content .post-area .post-body .post-actions button.btn-action{
+    border: 1px solid #dcdcdc;
+    color: #4e4e4e;
+}
+
+.home-content .post-area .post-body .post-actions button.btn-action:hover
+{
+    color: #dc3545;
+    border-color: #dc3545;
+}
+.home-content .post-area .post-body .post-actions #addToCard
+{
+    width: 120px;
+}
+
+.home-content .post-area .post-body .post-actions p{
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+    float: right;
+}
+
+
+/* ----------------- Start Responsive -------------------- */
+@media(max-width:600px){
+    .home-content{
+       margin-right: 5px;;
+        margin-left: auto;
+        
+       
+    }
+    
+    .home-content .post-area{
+        margin-left: 4px;
+        margin-top: 20px;
+        box-shadow: 5px 5px 10px #ccc;
+        
+    }
+    
+    .list-group .list-group-flush {
+        text-align: center;
+    }
+     
+}
+
+

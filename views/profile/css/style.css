@@ -1,0 +1,612 @@
+
+.profile-background{
+    background: url('../img/black-and-white-city-night.png');
+    height: 380px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* display: flex; */
+    align-items: center;
+    z-index: 1;
+    border-bottom: 2px solid var(--main);
+    box-shadow: 0 0 0 0.2rem var(--main);
+}
+/* ------------- Start Profile-content   ----------------*/
+
+.personal-info{
+    margin: 0 0 2%;
+    background-color:var(--white);
+    position: relative;
+    z-index: 3;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    position: relative;
+}
+
+.personal-info .under-line{
+    border-bottom: 1px solid #ccc;
+
+}
+.personal-info label#follwo-btn,
+.personal-info label#follwo-btn:active,
+.personal-info label#follwo-btn:hover,
+.personal-info label#follwo-btn:focus
+{
+    position: absolute;
+    top: 8%;
+    right: 32%;
+    border: 1px solid var(--main);
+    color: var(--white);
+    background-color: var(--main);
+    border-radius: 10px;
+    font-size: 13px;
+    /* font-weight: bold; */
+}
+
+.personal-info label#message-btn
+{
+    position: absolute;
+    top: 8%;
+    right: 28%;
+    background-color: var(--white);
+    border: 1px solid #4e4e4e;
+    color: #4e4e4e;
+    padding: .375rem .375rem;
+    border-radius: 50%;
+    /* border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px; */
+    /* font-size: 15px; */
+}
+.personal-info label#message-btn:active,
+.personal-info label#message-btn:focus,
+.personal-info label#message-btn:hover
+{
+    border-color: var(--main);
+    color: var(--main);
+}
+
+.personal-info .Avatar 
+{
+    position: relative;
+    max-width: 160px;
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transform: translate3d(0,-50%,0);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ccc;
+    /* font-size: 1.7em; */
+    border: 2px solid #ccc;
+    
+}
+.personal-info .Avatar .ChangePic
+{
+    position: absolute;
+    top: 108px;
+    left: 103px;
+    cursor: pointer;
+    color: var(--textBlack);
+    /* box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2); */
+}
+.personal-info .Avatar .ChangePic label
+{
+ cursor: pointer;
+ margin: 0;
+ background-color: transparent;
+ width: 90px;
+}
+.personal-info .Avatar .ChangePic label:hover
+{
+    color: Var(--main);
+}
+.personal-info .Avatar .image-preview__image{
+    /* max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50%; */
+    /* transform: translate3d(0,-50%,0); */
+    display: none;
+    width: 100%;
+    border-radius: 50%;
+    
+}
+
+.personal-info .profile-name{
+    margin-top: -80px;
+    cursor: default;
+}
+
+.personal-info .profile-name h3{
+    /* word-wrap: break-word; */
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.personal-info .profile-name h2 input{
+    text-align: center;
+    border: 0;
+}
+.personal-info .profile-name h2 input:disabled,
+.personal-info .profile-name h2 
+{
+ background-color: transparent;
+ color: #010101;
+}
+
+.personal-info .profile-name input
+{
+    text-align: center;
+    border: 0;
+    width: 50%;
+}
+.personal-info .profile-name input:disabled,
+.personal-info .profile-name span
+{
+    background-color: transparent;
+    color: #010101;
+    font-weight: bold;
+    text-align: center;
+}
+.personal-info .account-details ul li{
+    position: relative;
+    width: 34%;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border-right: 1px solid #dfdfdf;
+}
+
+.personal-info .account-details ul li:last-child{
+    border: 0;
+}
+.personal-info .account-details ul li p
+{
+   font-weight: bold;
+   text-transform: capitalize;
+   cursor: default;
+   color: #010101;
+}
+.personal-info .account-details ul li p:hover{
+    color: var(--main);
+}
+
+.personal-info .account-details ul li input
+{
+   font-weight: bold;
+   cursor: default;
+   width: 50%;
+   text-align: center;
+   border: none;
+}
+.personal-info .account-details ul li input:disabled
+{
+  font-weight: bold;
+  background-color: transparent;
+  color: #010101;
+}
+
+
+/* ----------- Start Sidebar-Information!!!! --------------------------------------- */
+.sidebar-info {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 6px;
+}
+.sidebar-info ul li{
+    border-bottom: 1px solid #f5f5f5;
+}
+.sidebar-info ul:first-child {
+    cursor: default;
+    list-style: none;
+}
+a#addProduct,
+a#addProduct:active
+a#addProduct:hover,
+a#addProduct:focus
+{
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   border-radius: 10px;
+   margin-bottom: 0;
+   background-color: var(--main);
+   color: var(--white);
+   border-color: var(--main);
+   font-size: 12px;
+}
+
+.sidebar-info ul:first-child li:first-child button
+{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    color: #4e4e4e;
+    margin-bottom: 0;
+}
+
+.sidebar-info ul:first-child li:nth-child(2) button{
+    display: none;
+    border: 0;
+    width: 100%;
+    padding: .75rem 1.25rem;
+}
+.sidebar-info ul:first-child li:first-child button:hover
+{
+    border-color: var(--main);
+    color: var(--main);
+    cursor: pointer;
+}
+.sidebar-info ul:first-child li:nth-child(2) button:hover
+{
+    background-color: transparent;
+    color: var(--primary);
+    border-top-left-radius: 5px;
+    cursor: pointer;
+}
+.sidebar-info ul:first-child li:first-child button:focus,
+.sidebar-info ul:first-child li:nth-child(2) button:focus
+{
+    outline: none;
+}
+
+.sidebar-info ul li svg{
+    width: 23px;
+    height: 23px;
+    margin-right: 6px;
+    /* color: var(--main); */
+}
+.sidebar-info ul li input
+{
+    padding: 2px;
+    border:2px solid #a6c7ff;
+    background-color:(rgb(84, 84, 84), rgb(170, 170, 170));
+}
+
+.sidebar-info ul li input:disabled
+{
+    border: 0;
+    background-color: transparent;
+}
+
+.sidebar-info ul li:last-child span {
+    margin-bottom: 9px;
+    display: inline-block;
+}
+.sidebar-info ul li ul li{
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+.sidebar-info ul li ul li:hover{
+    border-top-left-radius: 5px;
+    background-color: #f5f5f5;
+    padding-left: 1.5rem;
+}
+/* ----------- END Sidebar-Information --------------------------------------- */
+
+/* --------------------------
+
+     editProduct.css
+
+       --------------------          */
+/* ----------- Start Profile Body --------------------------------------- */
+.post-area{
+    position: relative;
+    z-index: 3;
+    margin: 15px 0px 15px 0;
+}
+
+.post-area .post-body{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+    width: 100%;
+    padding: 10px;  
+    /* box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2); */
+}
+
+.post-area .post-body .making-post-info,
+.post-area .post-body .post-info
+{
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.post-area .post-body .making-post-info span{
+    cursor: default;
+}
+.post-area .post-body .post-info a{
+    text-decoration: none;
+    color: var(--textBlack);
+}
+.post-area .post-body .post-info .type-item{
+    background-color: var(--main);
+    color: var(--white);
+    margin: auto;
+    border-radius: 4px;
+    padding: 3px 7px;
+    font-size: 10px;
+}
+.post-area .post-body .making-post-info img,
+.post-area .post-body .post-info a img
+{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.post-area .post-body .making-post-info span,
+.post-area .post-body .post-info a span
+{
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.post-area .post-body .making-post-info a:hover,
+.post-area .post-body .post-info a:hover
+{
+    color: var(--main);
+    cursor: pointer;
+}
+.post-area .post-body .making-post-info a:focus,
+.post-area .post-body .post-info a:focus{
+ outline: none;
+ box-shadow: none;
+ color: var(--main);
+}
+
+.post-area .post-body .making-post-info .card,
+.post-area .post-body .post-info .card
+{
+    border: 0;
+}
+
+.post-area .post-body .making-post-info .card ul{
+ flex-direction: row-reverse;
+}
+.post-area .post-body .post-info .card ul li
+{
+    list-style: none;
+}
+
+.post-area .post-body .making-post-info .card li{
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border-left: 1px solid #f5f5f5;
+    float:right;
+}
+.post-area .post-body .making-post-info .card li:last-child{
+    border: none;
+}
+
+.post-area .post-body .making-post-info .card li input[type="radio"]
+{
+    display: none;
+}
+.post-area .post-body .making-post-info .card li label{
+    
+    margin: 0 10px;
+    color: #333;
+    cursor: pointer;
+}
+.post-area .post-body .making-post-info .card li span
+{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--main);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    margin: 0 6px;
+}
+
+.post-area .post-body .making-post-info .card li span::after
+{
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: var(--main);
+    display:block;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+
+.post-area .post-body .making-post-info .card li input[type="radio"]:checked ~ span:after
+{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+.post-area .post-body textarea
+{
+    margin-left: 20px;
+    border:0;
+    width: 98%;
+    resize: none;
+}
+.post-area .post-body textarea:focus
+{
+   outline: none;
+}
+
+.post-area .post-body p
+{
+    margin-left: 20px;
+    border:0;
+}
+
+.post-area .post-body .post{
+    padding: 5px;
+    margin-top: -20px;
+}
+
+.post-area .post-body .post-height{
+    height: 300px;
+    width: 100%;
+}
+.post-area .post-body .post a{
+    cursor: zoom-in;
+}    
+.post-area .post-body .post img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.post-area .post-body .post-actions{
+    border-top: 1px solid #f5f5f5;
+    padding-top: 10px;
+    margin: 5px 13px 0;
+}
+.post-area .post-body .post-actions input
+{
+    margin-left: 20px;
+    border: 0;
+    border-bottom: 1px solid #ccc ;
+    text-align: center;
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+    float: right;
+}
+.post-area .post-body .post-actions input:focus
+{
+  outline: none;
+}
+
+.post-area .post-body .post-actions p
+{
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+    float: right;
+}
+.post-area .post-body .post-actions button{
+    width:120px;
+    margin-right: 5px ;  
+}
+.post-area .post-body .post-actions button.btn-action,
+.post-area .post-body .post-actions label.btn-action
+{
+    border: 1px solid #dcdcdc;
+    color: #4e4e4e;
+    margin-bottom: 0;
+}
+.post-area .post-body .post-actions button.btn-action:hover
+{
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.post-area .post-body .post-actions button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.post-area .post-body .post-actions button.edit-btn,
+.post-area .post-body .post-actions button.edit-btn:active,
+.post-area .post-body .post-actions button.edit-btn:hover,
+.post-area .post-body .post-actions button.edit-btn:focus {
+    background-color: var(--main);
+    color: var(--white);
+    border-color: var(--main);
+}
+/* .post-area .post-body .post-actions button:focus:last-child{
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 8px;
+}
+
+.post-area .post-body .post-actions button:focus:first-child{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    padding: 8px;
+} */
+
+
+/* ----------------- Start Responsive -------------------- */
+@media(min-width: 768px) and (max-width: 991px) {
+    .personal-info label#follwo-btn,
+    .personal-info label#follwo-btn:active,
+    .personal-info label#follwo-btn:focus,
+    .personal-info label#follwo-btn:focus
+    {
+        position: absolute;
+        top: 20px;
+        right: 160px;
+    }
+    .sidebar-info ul:first-child li:first-child button {
+        padding: 4%;
+        font-size: 9px;
+        width: 40%;
+    }
+    .sidebar-info ul:first-child li:first-child button svg{
+        width: 20px;
+        height: 16px;
+    }
+    #addProduct
+    {
+        padding: 4%;
+        font-size: 9px;
+        width: 40%;
+    }
+    #addProduct svg
+    {
+        width: 20px;
+        height: 16px;
+    }
+}
+/* 
+
+@media(max-width:800px){
+    .profile-content{
+       margin-right: 5px;;
+        margin-left: auto;   
+    }
+    
+    .post-area{
+        margin-left: 4px;
+        margin-top: 20px;
+        box-shadow: 5px 5px 10px #ccc;
+        
+    }
+    
+    .list-group .list-group-flush {
+        text-align: center;
+    }
+  
+} */

@@ -1,0 +1,180 @@
+/* ------------- Start navbar ----------------*/
+.navbar{
+    /* background-color: var(--main); */
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+.navbar .navbar-brand img{
+   width: 33px;
+ 
+}
+.navbar a{
+    color: var(--black);
+    /* font-weight: bold; */
+}
+.navbar a.navbar-brand {
+    color: var(--main);
+    font-weight: bold;
+}
+
+.navbar .dropdown .dropdown-menu a{
+    color: #666;
+}
+
+.navbar ul li:nth-child(1):hover,
+.navbar ul li:nth-child(2) button:hover,
+.navbar ul li:nth-child(3):hover,
+.navbar ul li:nth-child(4):hover{
+    color: var(--main);
+}
+.navbar ul li:nth-child(1)
+{
+    display: flex;
+    align-items: center;
+}
+.navbar ul li:nth-child(1) a{
+    position: relative;
+}
+
+.navbar .dropdown .badge
+{
+    color: var(--white);
+    background-color: var(--main);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: -1px;
+    right: -3px;
+    line-height: 9px;
+    font-size: 10px;
+}
+
+.navbar ul li:nth-child(2){
+    /* width:150px; */
+    text-align: center;
+}
+.navbar ul li:nth-child(2) button{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li:nth-child(2) img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.navbar ul li:nth-child(2) span{
+    font-size: 13px;
+    /* font-weight: bold; */
+    margin-left:4px ;
+}
+ 
+.navbar ul li:nth-child(2) button:focus
+{
+    box-shadow: none;
+}
+.navbar ul li:nth-child(3) .dropdown-menu
+{
+    text-align: center;
+    background-color: var(--main);
+    border-radius: 11px;
+
+}
+.navbar ul li:nth-child(4) a
+{
+    color: var(--light);
+}
+.navbar ul li:nth-child(2) a:hover
+{
+    color: var(--main);
+}
+
+
+.navbar ul li .signup:hover
+{
+ background-color: Var(--main);
+ border-color: var(--main);
+ color: var(--white);
+}
+
+.navbar ul li .login
+{
+    background-color: Var(--main);
+    border-color: var(--main);
+    color: var(--white);
+}
+.navbar ul li .login:hover,
+.navbar ul li .login:active,
+.navbar ul li .login:focus {
+    color: var(--white) !important;
+    background-color: Var(--main) !important;
+    text-decoration: none;
+}
+.navbar ul li button.logout
+{
+    width: 141px;
+    text-align:center;
+}
+.navbar ul li button.logout svg
+{
+  margin-top: 1.5px;
+}
+.navbar ul li button.logout:hover
+{
+    background-color: Var(--mainHover);
+    border-color: var(--light);
+    color: var(--light);
+}
+
+.navbar form{
+    position: relative;
+}
+.navbar form input{
+    background-color: transparent;
+    border-bottom: 2px solid var(--light);;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.navbar form input:focus{
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 0.2rem transparent !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.navbar form input::-webkit-input-placeholder{
+    color:var(--light);
+}
+
+.navbar form input:focus::-webkit-input-placeholder{
+    color:#666
+}
+
+.navbar form  svg{
+    cursor: pointer;
+}
+
+.navbar button{
+    color: var(--black);
+}
+.navbar-nav .dropdown-menu {
+    padding: 0
+}
+.navbar-nav .dropdown-menu .dropdown-item {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 7px 1.5rem;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.navbar-nav .dropdown-menu button.dropdown-item {
+    border-bottom: none;
+}

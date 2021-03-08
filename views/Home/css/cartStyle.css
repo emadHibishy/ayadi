@@ -1,0 +1,129 @@
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.post-body{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid var(--main);
+    border-radius: .25rem;
+    width: 25rem;
+    /* height: 25rem; */
+    max-width: 95%;
+    padding: 10px;
+    margin-bottom:15px ; 
+    /* box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2); */
+}
+
+.post-body .post-info
+{
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 10px;
+    margin: 0 13px 15px;
+}
+.post-body .post-info a {
+    text-decoration: none;
+    color: var(--textBlack);
+
+}
+.post-body .post-info a img
+{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+}
+
+.post-body .post-info a span
+{
+    font-weight: bold;
+    padding-left: 5px;
+}
+.post-body .post-info a:hover
+{
+    color: var(--main);
+    cursor: pointer;
+}
+.post-body .post-info .type-item{
+    background-color: var(--main);
+    color: var(--white);
+    margin: auto;
+    border-radius: 4px;
+    padding: 3px 7px;
+    font-size: 10px;
+}
+
+.post-body .post
+{
+    padding: 5px;
+    margin-top: -20px;
+}
+
+
+.post-body .post .post-height
+{
+    height: 300px;
+    width: 100%;
+}
+.post-body .post img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.post-body .post a {
+    cursor: zoom-in;
+}
+
+.post-body p
+{
+    padding-bottom: 1em;
+    margin-left: 20px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+.post-body .post-actions
+{
+    /* border-top: 1px solid #f5f5f5; */
+    padding-top: 5px;
+    margin: 5px 13px 0;
+}
+.post-body .post-actions button
+{
+    width: 120px;
+    margin-right: 5px ;
+
+}
+.post-body .post-actions button.request-btn,
+.post-body .post-actions button.request-btn:active,
+.post-body .post-actions button.request-btn:hover,
+.post-body .post-actions button.request-btn:focus
+{
+    background-color: var(--main);
+    color: var(--white);
+    border-color: var(--main);
+}
+.post-body .post-actions button.btn-action
+{
+    border: 1px solid #dcdcdc;
+    color: #4e4e4e;
+}
+.post-body .post-actions p
+{
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+    float: right;
+    border: 0;
+    padding: 0;
+}

@@ -1,0 +1,25 @@
+.post .image-preview
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 1.7em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.post .image-preview__image
+{
+    display: none;
+}
+
+.post-area .post-body input[type="file"]
+{
+ display: none;
+}
+
+.post-actions span{
+    font-size: 20px;
+}

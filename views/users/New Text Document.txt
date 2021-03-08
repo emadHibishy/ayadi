@@ -1,0 +1,4 @@
+<!-- <% if(isAuthenticated) {%> -->
+                    <!-- <& } else { &> -->
+                    <!--  add login | sign up buttons with Css -->
+                    <!-- <% } %> -->

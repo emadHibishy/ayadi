@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= pageTitle%></title>
+    <link rel='stylesheet' href='/assets/home&profile/font-awesome.min.css' />
+    <link rel="stylesheet" href="/assets/home&profile/bootstrap.min.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/body.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/colors.css">
+    <link rel="stylesheet" href="/_includes/Navbar/css/navStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/css/blockStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/themes/red-theme.css">
+    <link rel="stylesheet" href="/assets/home&profile/magnific-popup.css">
+    <link rel="stylesheet" href="../Home/css/cartStyle.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'>
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+            <script src="js/respond.min.js"></script>
+            <![endif]-->
+
+
+</head>
+
+<body>
+
+    <!--Start Navbar-->
+    <%-include('../_includes/Navbar/homeNav.ejs')%>
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="grid flex-wrap">
+            <% if(products.length > 0) { %>
+            <!-- <div class="col-md-12 w-100">
+
+                        <h1 class="offset-1 mt-1">Added to Your Cart</h1>
+                    </div> -->
+            <% for (let product of products ) { %>
+
+            <div class="post-body mt-5">
+                <input type="hidden" value="<%=product.userId%>" name="userId">
+                <div class="post">
+                    <div id="carouselExampleControls" class="post carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="post-height carousel-item active">
+                                <a href="/<%= product.image %>" class="image-maginfy">
+                                    <img src="/<%= product.image %>" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a> -->
+                    </div>
+                </div>
+
+                <div class="post-info d-flex">
+                    <% for(let handcraft of handcrafts){%>
+                    <% if (handcraft.id == product.userId){%>
+                    <div class="flex-grow-1 d-flex align-items-center">
+                        <a href="/profile/<%=product.userId%>">
+                            <img src="/<%= handcraft.image%>" alt="<%=handcraft.name%>">
+                            <span><%=handcraft.name%></span>
+                        </a>
+                    </div>
+                    <% } %>
+                    <% } %>
+
+
+                    <span class="type-item">
+                        <svg width="15" height="12" fill="#FFF" viewBox="0 0 512 512">
+                            <path d="M80 160l26.66-53.33L160 80l-53.33-26.67L80 0 53.33 53.33 0 80l53.33 26.67L80 160zm351.99 128l-26.66 53.33L351.99 368l53.33 26.67L431.99 448l26.66-53.33L511.98 368l-53.33-26.67L431.99 288zm-208-192l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zm208 96c8.84 0 16-7.16 16-16v-34.11L502.02 82c13.81-15.22 13.22-38.53-1.31-53.09l-17.66-17.63c-14.5-14.52-37.84-15.08-53-1.36L157.28 256H112c-8.84 0-16 7.16-16 16v39.28l-78.53 70.84-.06.05C6.72 391.86.38 405.69.04 420.12c-.37 14.44 5.28 28.58 15.5 38.81l37.53 37.52c9.87 9.92 23.5 15.55 37.5 15.55 22.17 0 35.57-13.37 39.28-17.47L402.78 192h29.21zM94.22 462.36c-.82.91-4.23 3.24-7.22.17l-37.53-37.52c-2.97-3.01-.73-6.44.16-7.27L455.49 51.61l4.91 4.88L94.22 462.36z"></path>
+                        </svg>
+                        <%= product.type %>
+                    </span>
+                </div>
+
+
+                <div>
+                    <p><%= product.describtion %></p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <span class="mt-2">Quantity: <%= product.cartItem.quantity %></span>
+                    <span class="mt-2 ml-3">Product Price: <%= product.price %> ج.م</span>
+                </div>
+
+                <div class="post-actions">
+                    <a href="/checkout">
+                        <button type="button" class="d-inline-block btn request-btn">Order
+                            Now!</button>
+                    </a>
+
+                    <form action="/cart-delete-item" method="POST" class="btn p-0">
+                        <input type="hidden" name="productId" value="<%= product.id %>">
+                        <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+                        <button class="btn btn-action" type="submit">Delete</button>
+                    </form>
+
+                    <p class="ml-3"><%= product.cartItem.quantity * product.price %> ج.م</p>
+
+                    <!-- <form action="/create-order" method="POST">
+                                            <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+                                            <button type="submit" class="btn">Order Now!</button>
+                                        </form> -->
+                </div>
+
+            </div>
+
+            <% } %>
+            <% } else { %>
+            <div class="col-md-12 w-100 text-center">
+
+                <h1>No Products Yet</h1>
+            </div>
+            <% } %>
+
+        </div>
+    </div>
+
+
+    <!--Start Theme Block-->
+    <%-include('../_includes/Theme Block/themeBlock.ejs')%>
+
+    <!-- Start Scroll To Top -->
+    <div id="scroll-top">
+        <i class="fa fa-chevron-up fa-3x"></i>
+    </div>
+
+    <script src="../assets/home&profile/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/home&profile/js/bootstrap.min.js"></script>
+    <script src="/assets/home&profile/js/jquery.magnific-popup.min.js"></script>
+    <script src="../_includes/Theme Block/js/theme.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="/Home/js/home.js"></script>
+</body>
+
+</html>

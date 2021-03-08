@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+    <img src="/<%=handcraft.image%>" alt="<%= handcraft.name%>">
+
+
+
+
+
+
+
+<div>
+                                    <a href="/profile/<%=handcraft.id%>"><p><%= handcraft.name%></p></a>
+                                </div>
+                                <div>
+                                    <p>0<%= handcraft.phone%></p>
+                                </div>

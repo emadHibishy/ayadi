@@ -1,0 +1,86 @@
+
+/* Start Section log in */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    border: 1px solid rgb(161, 161, 161);
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+ background-color: #0e0a4a;
+ border-radius: 15px;
+}
+
+html,body {
+    height: 100%;
+}
+body {
+    background:url('../img/backgound.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+.log-in {
+    background-color:rgba(9,9,9,0.8);
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-in .fields img{
+    margin-top: 20px;
+    width: 7%;
+}
+.log-in .fields {
+    color:#DDD;
+}
+
+/* .log-in p {margin-bottom:40px} */
+
+.log-in textarea {height:108px}
+
+.log-in input[type="text"],
+.log-in input[type="email"],
+.log-in input[type="password"],
+
+.log-in textarea {
+    background:rgba(248,249,250,0.8);
+    color: #212529;
+    border:none;
+}
+
+.log-in .butt{
+    border: none;
+    outline: none;
+    
+}
+.log-in .butt:active{
+    border: none;
+    outline: none;
+}
+.butt a{
+    color: #FFF;
+}
+
+#open, #close {
+    position: absolute;
+    top:75px;
+    right: 40px;
+    font-size:20px;
+    cursor: pointer;
+    border: none;
+    color: black;
+}
+#close {
+    display: none;
+}
+.mt-40px {
+    margin-top: 40px;
+}
+
+
+
+
+
+/* End Section sign in */

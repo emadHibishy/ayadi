@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- IE Compatibility Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- First Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>log in</title>
+    <link rel='stylesheet' href='/assets/login&signup/font-awesome.min.css' />
+    <link rel='stylesheet' href='/assets/login&signup/bootstrap.css' />
+    <link rel='stylesheet' href='/login/css/pages.css'/>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <!-- Start Section Log-in -->
+
+    <section class="log-in text-center">
+
+        <div class="fields">
+
+            <div class="container">
+                <img src="/login/img/fox logo/fox1.svg" alt="">
+                <h2 class="h1">Ayadi</h2>
+                <p class="lead">Login Now!</p>
+                <!-- Start Contact Form -->
+                <div class="row">
+                    <% if (errorMessage) { %>
+                    <div><%= errorMessage %></div>
+                    <% } %>
+                    <form role="form" action="/login" method="POST" id="main">
+                        <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+                        <div
+                            class="col-lg-offset-4 col-lg-4 col-lg-offset-4 col-md-offset-3 col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6 col-sm-offset-3 col-xs-offset-1 col-xs-10 col-xs-offset-1">
+
+                            <div class="form-group">
+                                <input type="email" class="form-control input-lg" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="op" class="form-control input-lg" name="password"
+                                    placeholder="password">
+                                <svg id="open" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="#000"
+                                        d="M288 288a64 64 0 0 0 0-128c-1 0-1.88.24-2.85.29a47.5 47.5 0 0 1-60.86 60.86c0 1-.29 1.88-.29 2.85a64 64 0 0 0 64 64zm284.52-46.6C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 96a128 128 0 1 1-128 128A128.14 128.14 0 0 1 288 96zm0 320c-107.36 0-205.46-61.31-256-160a294.78 294.78 0 0 1 129.78-129.33C140.91 153.69 128 187.17 128 224a160 160 0 0 0 320 0c0-36.83-12.91-70.31-33.78-97.33A294.78 294.78 0 0 1 544 256c-50.53 98.69-148.64 160-256 160z">
+                                    </path>
+                                </svg>
+                                <svg id="close" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 640 512">
+                                    <path fill="#000"
+                                        d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <button type="submit" id="log" class=" butt btn btn-danger btn-lg btn-block">Log in</button>
+
+                        </div>
+
+                    </form>
+
+                    <!-- End Contact Form -->
+                </div>
+
+                <div
+                    class="col-lg-offset-4 col-lg-4 col-lg-offset-4 col-md-offset-3 col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6 col-sm-offset-3 col-xs-offset-1 col-xs-10 col-xs-offset-1">
+                    <p class="lead mt-40px"> Don't have an Account yet? </p>
+                    <a href="/signup" class="butt btn btn-info btn-lg btn-block text-center">Create your account </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/home&profile/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/login&signup/js/bootstrap.min.js"></script>
+    <script src="/login/js/test.js"></script>
+    <!-- End Section Log-in -->
+
+</body>
+
+</html>

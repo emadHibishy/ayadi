@@ -1,0 +1,90 @@
+/* Start Theme Block */
+.theme-block {
+    z-index: 9999;
+    position: fixed;
+    top: 150px;
+    left: -200px;
+    transition: all 0.5s ease-in-out;
+}
+.theme-block.move {
+    left: 0;
+}
+.theme-block .colors-list {
+    width: 200px;
+    float: left;
+    background: var(--carousel-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+.theme-block .colors-list li {
+    width: 45%;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 10%;
+    cursor: pointer;
+}
+.theme-block .colors-list li:first-child {
+    background-color: #661a1a;
+}
+.theme-block .colors-list li:nth-child(2) {
+    background-color: #76c38f;
+    margin-right: 0;
+}
+.theme-block .colors-list li:nth-child(3) {
+    background-color: #01013d;
+    margin-bottom: 0;
+}
+.theme-block .colors-list li:last-child {
+    background-color:#9c6b7e;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.theme-block span {
+    background: var(--main);
+    color: #FFFF;
+    font-size: 35px;
+    padding: 5px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+.loader {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+/* Start Loading Animation */
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+/* End Theme Block */

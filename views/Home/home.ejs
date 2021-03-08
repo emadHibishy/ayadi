@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= pageTitle%></title>
+    <link rel='stylesheet' href='/assets/home&profile/font-awesome.min.css' />
+    <link rel="stylesheet" href="/assets/home&profile/bootstrap.min.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/body.css">
+    <link rel="shortcut icon" type="image/icon" href="img/logo/4_1__hah_icon.ico">
+    <link rel="stylesheet" href="/_includes/_generalCss/colors.css">
+    <link rel="stylesheet" href="/_includes/Navbar/css/navStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/css/blockStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/themes/red-theme.css">
+    <link rel="stylesheet" href="/assets/home&profile/magnific-popup.css">
+    <link rel="stylesheet" href="/Home/css/style.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%-include('../_includes/Navbar/homeNav.ejs')%>
+
+    <div class="container home-content">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12 mb-4">
+                <div class="post-card-list home-sidebar">
+                    <ul class="list-group list-group-flush">
+                        <li class="d-flex align-items-center">
+                            <a href="/home/category/crochet">
+                                <svg viewBox="0 0 512 512">
+                                    <path
+                                        d="M80 160l26.66-53.33L160 80l-53.33-26.67L80 0 53.33 53.33 0 80l53.33 26.67L80 160zm351.99 128l-26.66 53.33L351.99 368l53.33 26.67L431.99 448l26.66-53.33L511.98 368l-53.33-26.67L431.99 288zm-208-192l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zm208 96c8.84 0 16-7.16 16-16v-34.11L502.02 82c13.81-15.22 13.22-38.53-1.31-53.09l-17.66-17.63c-14.5-14.52-37.84-15.08-53-1.36L157.28 256H112c-8.84 0-16 7.16-16 16v39.28l-78.53 70.84-.06.05C6.72 391.86.38 405.69.04 420.12c-.37 14.44 5.28 28.58 15.5 38.81l37.53 37.52c9.87 9.92 23.5 15.55 37.5 15.55 22.17 0 35.57-13.37 39.28-17.47L402.78 192h29.21zM94.22 462.36c-.82.91-4.23 3.24-7.22.17l-37.53-37.52c-2.97-3.01-.73-6.44.16-7.27L455.49 51.61l4.91 4.88L94.22 462.36z">
+                                    </path>
+                                </svg>
+                                Crochet
+                            </a>
+                        </li>
+
+                        <li class="d-flex align-items-center">
+                            <a href="/home/category/portrait">
+                                <svg viewBox="0 0 512 512">
+                                    <path
+                                        d="M80 160l26.66-53.33L160 80l-53.33-26.67L80 0 53.33 53.33 0 80l53.33 26.67L80 160zm351.99 128l-26.66 53.33L351.99 368l53.33 26.67L431.99 448l26.66-53.33L511.98 368l-53.33-26.67L431.99 288zm-208-192l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zm208 96c8.84 0 16-7.16 16-16v-34.11L502.02 82c13.81-15.22 13.22-38.53-1.31-53.09l-17.66-17.63c-14.5-14.52-37.84-15.08-53-1.36L157.28 256H112c-8.84 0-16 7.16-16 16v39.28l-78.53 70.84-.06.05C6.72 391.86.38 405.69.04 420.12c-.37 14.44 5.28 28.58 15.5 38.81l37.53 37.52c9.87 9.92 23.5 15.55 37.5 15.55 22.17 0 35.57-13.37 39.28-17.47L402.78 192h29.21zM94.22 462.36c-.82.91-4.23 3.24-7.22.17l-37.53-37.52c-2.97-3.01-.73-6.44.16-7.27L455.49 51.61l4.91 4.88L94.22 462.36z">
+                                    </path>
+                                </svg>
+                                Portrait
+                            </a>
+                        </li>
+
+                        <li class="d-flex align-items-center">
+                            <a href="/home/category/glassPainting">
+                                <svg viewBox="0 0 512 512">
+                                    <path
+                                        d="M80 160l26.66-53.33L160 80l-53.33-26.67L80 0 53.33 53.33 0 80l53.33 26.67L80 160zm351.99 128l-26.66 53.33L351.99 368l53.33 26.67L431.99 448l26.66-53.33L511.98 368l-53.33-26.67L431.99 288zm-208-192l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zm208 96c8.84 0 16-7.16 16-16v-34.11L502.02 82c13.81-15.22 13.22-38.53-1.31-53.09l-17.66-17.63c-14.5-14.52-37.84-15.08-53-1.36L157.28 256H112c-8.84 0-16 7.16-16 16v39.28l-78.53 70.84-.06.05C6.72 391.86.38 405.69.04 420.12c-.37 14.44 5.28 28.58 15.5 38.81l37.53 37.52c9.87 9.92 23.5 15.55 37.5 15.55 22.17 0 35.57-13.37 39.28-17.47L402.78 192h29.21zM94.22 462.36c-.82.91-4.23 3.24-7.22.17l-37.53-37.52c-2.97-3.01-.73-6.44.16-7.27L455.49 51.61l4.91 4.88L94.22 462.36z">
+                                    </path>
+                                </svg>
+                                Glass Painting
+                            </a>
+                        </li>
+
+                        <li class="d-flex align-items-center">
+                            <a href="/home/users">
+                                <svg viewBox="0 0 512 512">
+                                    <path
+                                        d="M80 160l26.66-53.33L160 80l-53.33-26.67L80 0 53.33 53.33 0 80l53.33 26.67L80 160zm351.99 128l-26.66 53.33L351.99 368l53.33 26.67L431.99 448l26.66-53.33L511.98 368l-53.33-26.67L431.99 288zm-208-192l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zm208 96c8.84 0 16-7.16 16-16v-34.11L502.02 82c13.81-15.22 13.22-38.53-1.31-53.09l-17.66-17.63c-14.5-14.52-37.84-15.08-53-1.36L157.28 256H112c-8.84 0-16 7.16-16 16v39.28l-78.53 70.84-.06.05C6.72 391.86.38 405.69.04 420.12c-.37 14.44 5.28 28.58 15.5 38.81l37.53 37.52c9.87 9.92 23.5 15.55 37.5 15.55 22.17 0 35.57-13.37 39.28-17.47L402.78 192h29.21zM94.22 462.36c-.82.91-4.23 3.24-7.22.17l-37.53-37.52c-2.97-3.01-.73-6.44.16-7.27L455.49 51.61l4.91 4.88L94.22 462.36z">
+                                    </path>
+                                </svg>
+                                <span>Users</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <% if(prods.length > 0) { %>
+                <div class="post-area">
+                    <% for (let product of prods ) { %>
+                    <input type="hidden" value="<%=product.userId%>" name="userId">
+                    <!-- <input type="hidden" value="<%=product.id%>" name="productId"> -->
+                    <div class="home-content post-body mb-5">
+                        <div class="post">
+                            <div id="carouselExampleControls" class="post carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="post-height carousel-item active">
+                                        <a href="/<%= product.image %>" class="image-maginfy">
+                                            <img src="/<%= product.image %>" class="img-responsive" alt="" draggable="false">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a> -->
+                            </div>
+                        </div>
+
+                        <div class="post-info d-flex">
+                            <% for(let handcraft of handcrafts){%>
+                                <% if (handcraft.id == product.userId){%>
+                                    <div class="flex-grow-1 d-flex align-items-center">
+                                        <a href="/profile/<%=product.userId%>">
+                                            <img src="/<%= handcraft.image%>" alt="<%=handcraft.name%>">
+                                            <span><%=handcraft.name%></span>
+                                        </a>
+                                    </div>
+                                <% } %>
+                            <% } %>
+                            <span class="type-item">
+                                <svg width="15" height="12" fill="#FFF" viewBox="0 0 512 512">
+                                    <path d="M80 160l26.66-53.33L160 80l-53.33-26.67L80 0 53.33 53.33 0 80l53.33 26.67L80 160zm351.99 128l-26.66 53.33L351.99 368l53.33 26.67L431.99 448l26.66-53.33L511.98 368l-53.33-26.67L431.99 288zm-208-192l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zm208 96c8.84 0 16-7.16 16-16v-34.11L502.02 82c13.81-15.22 13.22-38.53-1.31-53.09l-17.66-17.63c-14.5-14.52-37.84-15.08-53-1.36L157.28 256H112c-8.84 0-16 7.16-16 16v39.28l-78.53 70.84-.06.05C6.72 391.86.38 405.69.04 420.12c-.37 14.44 5.28 28.58 15.5 38.81l37.53 37.52c9.87 9.92 23.5 15.55 37.5 15.55 22.17 0 35.57-13.37 39.28-17.47L402.78 192h29.21zM94.22 462.36c-.82.91-4.23 3.24-7.22.17l-37.53-37.52c-2.97-3.01-.73-6.44.16-7.27L455.49 51.61l4.91 4.88L94.22 462.36z"></path>
+                                </svg>
+                                <%= product.type %>
+                            </span>
+                        </div>
+
+                        <div>
+                            <p><%= product.describtion %></p>
+                        </div>
+
+                        <div class="post-actions">
+                            <!-- <button type="button" class="d-inline-block btn request-btn">
+                                <svg width="15" height="15" viewBox="0 0 448 512" fill="#FFF">
+                                    <path
+                                        d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z">
+                                    </path>
+                                </svg>
+                                Request <span>(23)</span>
+                            </button> -->
+
+                            <form action="/cart" method="post" class="btn p-0">
+                                <button id="addToCard" class="btn request-btn" type="submit">
+                                    <svg width="15" height="15" class="mr-1" viewBox="0 0 576 512" fill="currentColor">
+                                        <path
+                                            d="M528.12 301.319l47.273-208C578.806
+                                    78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255
+                                    10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928
+                                    25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                                        </path>
+                                    </svg>
+                                    Add to Cart</button>
+                                <input type="hidden" name="productId" value="<%= product.id %>">
+                                <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+                            </form>
+
+                            <form action="/home/productLike/<%=product.id%>" method="post">
+                                <button type="submit" class="d-inline-block btn btn-action">
+                                    <svg width="15" height="15" viewBox="0 0 512 512" fill="currentColor">
+                                        <path
+                                            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
+                                        </path>
+                                    </svg>
+                                    Love <span>(<%=product.likes%>)</span>
+                                </button>
+                                <input type="hidden" name="productId" value="<%= product.id %>">
+                                <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+                            </form>
+                            <p><%= product.price %> ج.م</p>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <% } else { %>
+                <h1 class="ml-5">No Products Yet</h1>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <!--Theme Block-->
+    <%-include('../_includes/Theme Block/themeBlock.ejs')%>
+
+    <!-- Scroll To Top -->
+    <div id="scroll-top">
+        <i class="fa fa-chevron-up fa-3x"></i>
+    </div>
+
+    <script src="../assets/home&profile/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/home&profile/js/bootstrap.min.js"></script>
+    <script src="/assets/home&profile/js/jquery.magnific-popup.min.js"></script>
+    <script src="../_includes/Theme Block/js/theme.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="/Home/js/home.js"></script>
+</body>
+
+</html>

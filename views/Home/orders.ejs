@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel='stylesheet' href='/assets/home&profile/font-awesome.min.css' />
+    <link rel="stylesheet" href="/assets/home&profile/bootstrap.min.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/body.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/colors.css">
+    <link rel="stylesheet" href="/_includes/Navbar/css/navStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/css/blockStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/themes/red-theme.css">
+    <link rel="stylesheet" href="/Home/css/style.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+ 
+</head>
+
+<body>
+    <!--Start Navbar-->
+
+    <%-include('../_includes/Navbar/homeNav.ejs')%>
+    
+    <!--End Navbar-->
+
+    <!-- <div class="profile-background"></div> -->
+    <div class="home-content">
+        <div class="col-md-7 col-sm-12 col-xs-12">
+            <div class="post-area">
+                <% if (orders.length <= 0) { %>
+                    <h1 class="ml-5">Nothing Ordered Yet!</h1>
+                <% } else { %>
+                    <ul>
+                        <% orders.forEach(order => { %>
+                            <li>
+                                <h1># <%= order.id %></h1>
+                                <ul>
+                                    <% order.products.forEach(product => { %>
+                                        <li><%= product.describtion %> (<%= product.orderItem.quantity %>)</li>
+                                        <li><img src="<%= product.image %>" alt="<%= product.describtion %>"></li>
+                                    <% }); %>
+                                </ul>
+                            </li>
+                        <% }); %>
+                    </ul>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+    <!--Start Theme Block-->
+
+    <%-include('../_includes/Theme Block/themeBlock.ejs')%>
+
+    <!--End Theme Block-->
+
+
+     <!-- Start Scroll To Top -->
+        
+          <div id="scroll-top">
+            <i class="fa fa-chevron-up fa-3x"></i>
+        </div>
+        
+        <!-- End Scroll To Top -->
+
+
+    <script src="../assets/home&profile/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/home&profile/js/bootstrap.min.js"></script>
+    <script src="../_includes/Theme Block/js/theme.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="/Home/js/home.js"></script>
+</body>
+
+</html>

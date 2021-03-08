@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= pageTitle%></title>
+    <link rel='stylesheet' href='/assets/home&profile/font-awesome.min.css' />
+    <link rel="stylesheet" href="/assets/home&profile/bootstrap.min.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/body.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/colors.css">
+    <link rel="stylesheet" href="/_includes/Navbar/css/navStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/css/blockStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/themes/red-theme.css">
+    <link rel="stylesheet" href="/Home/css/style.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'>
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+            <script src="js/respond.min.js"></script>
+            <![endif]-->
+
+
+</head>
+
+<body>
+
+    <!--Start Navbar-->
+
+    <%-include('../_includes/Navbar/homeNav.ejs')%>
+
+    <!--End Navbar-->
+
+    <div class="home-content">
+        <div class="col-md-7 col-sm-12 col-xs-12">
+            <% if(products.length > 0) { %>
+            <div class="post-are">
+                <% for (let product of products ) { %>
+                <div class="post-body">
+                    <input type="hidden" value="<%=product.userId%>" name="userId">
+                    <div class="post-info">
+                        <% for(let handcraft of handcrafts){%>
+                        <% if (handcraft.id == product.userId){%>
+                        <a href="/profile/<%=product.userId%>">
+                            <img src="/<%= handcraft.image%>" alt="<%=handcraft.name%>">
+
+                            <span><%=handcraft.name%></span>
+
+                        </a>
+                        <% } %>
+                        <% } %>
+
+
+                        <p class="btn  float-right" role="button" aria-expanded="false"
+                            aria-controls="multiCollapseExample1">
+                            <svg aria-hidden="true" style="width: 20px; height: 20px;" focusable="false"
+                                data-prefix="far" data-icon="wand-magic" role="img" viewBox="0 0 512 512"
+                                class="svg-inline--fa fa-wand-magic fa-w-16 fa-2x">
+                                <path fill="currentColor"
+                                    d="M80 160l26.66-53.33L160 80l-53.33-26.67L80 0 53.33 53.33 0 80l53.33 26.67L80 160zm351.99 128l-26.66 53.33L351.99 368l53.33 26.67L431.99 448l26.66-53.33L511.98 368l-53.33-26.67L431.99 288zm-208-192l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zm208 96c8.84 0 16-7.16 16-16v-34.11L502.02 82c13.81-15.22 13.22-38.53-1.31-53.09l-17.66-17.63c-14.5-14.52-37.84-15.08-53-1.36L157.28 256H112c-8.84 0-16 7.16-16 16v39.28l-78.53 70.84-.06.05C6.72 391.86.38 405.69.04 420.12c-.37 14.44 5.28 28.58 15.5 38.81l37.53 37.52c9.87 9.92 23.5 15.55 37.5 15.55 22.17 0 35.57-13.37 39.28-17.47L402.78 192h29.21zM94.22 462.36c-.82.91-4.23 3.24-7.22.17l-37.53-37.52c-2.97-3.01-.73-6.44.16-7.27L455.49 51.61l4.91 4.88L94.22 462.36z"
+                                    class=""></path>
+                            </svg>
+                            <%= product.type %>
+                        </p>
+
+                    </div>
+                    <div class="post">
+                        <div id="carouselExampleControls" class="post carousel slide" data-ride="carousel">
+                            <!-- <div class="carousel-inner">
+                                                <div class="post-height carousel-item active">
+                                                    <img src="/<%= product.image %>" class="img-responsive">
+                                                </div>
+                                                </div> -->
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Product Name: <%= product.describtion %></p>
+                    </div>
+                    <div>
+                        <p>Quantity: <%= product.cartItem.quantity %></p>
+                    </div>
+                    <div>
+                        <p>Product Price: <%= product.price %> ج.م</p>
+                    </div>
+                    <div>
+                        <p>Total Price: <%= product.cartItem.quantity * product.price %> ج.م</p>
+                    </div>
+
+                    <div class="post-actions text-center">
+                        <button id="order-btn" class="btn btn-outline-danger col-4">Order Now!</button>
+                        <script src="https://js.stripe.com/v3/"></script>
+                        <script>
+                            var stripe = Stripe('pk_test_51GvXeGHVGbfBrYDIyJiZOhyUJ0VvHNXa6lKVMAgcy6VMcjIe4J3lhzmvilAOO9CBAlAyGoHSeSXzxlLBqnqfiDxt00pnarW8xC');
+                            var orderBtn = document.getElementById('order-btn');
+                            orderBtn.addEventListener('click', function () {
+                                stripe.redirectToCheckout({
+                                    sessionId: '<%= sessionId %>'
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <% } %>
+                </div>
+
+                <% } else { %>
+                <h1 class="ml-5">No Products Yet</h1>
+                <% } %>
+
+
+            </div>
+        </div>
+
+        <!--Start Theme Block-->
+
+        <%-include('../_includes/Theme Block/themeBlock.ejs')%>
+
+        <!--End Theme Block-->
+
+
+        <!-- Start Scroll To Top -->
+        
+        <div id="scroll-top">
+            <i class="fa fa-chevron-up fa-3x"></i>
+        </div>
+
+        <!-- End Scroll To Top -->
+
+
+        <script src="../assets/home&profile/js/jquery-3.3.1.min.js"></script>
+        <script src="/assets/home&profile/js/bootstrap.min.js"></script>
+        <script src="../_includes/Theme Block/js/theme.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="/Home/js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+body{
+    font-size: 12px;
+}
+
+/* Start Section sign in */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    border: 1px solid rgb(161, 161, 161);
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+ background-color: #0e0a4a;
+ border-radius: 15px;
+}
+
+.sign-up {
+    background:url('../img/backgound.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    
+
+}
+
+.sign-up  .fields img{
+    margin-top: 10px;
+    width: 7%;
+    
+
+}
+.sign-up  .fields 
+{
+    background:rgba(9,9,9,0.8);min-height:650px;color:#DDD
+}
+
+/* .sign-up  p:last-child{
+    margin-bottom:30px
+} */
+
+.sign-up  textarea {height:108px}
+
+.sign-up  input[type="text"],
+.sign-up  input[type="email"],
+.sign-up  input[type="password"],
+.sign-up  textarea {
+    background:rgba(248,249,250,0.8);
+    color: #212529;
+    border:none;
+}
+
+
+.sign-up  .butt{
+    border: none;
+    outline: none;
+    
+}
+.sign-up .butt:active{
+    border: none;
+    outline: none;
+}
+
+ a:hover, a:focus{
+    text-decoration: none;
+     border: none;
+    outline: none;
+}
+
+.sign-up .fields .role{
+    margin-top: 15px;
+}
+
+.sign-up .fields .role p{
+    font-size: 20px;
+    font-family: 'Exo', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: normal;
+    
+}
+
+hr{
+    color: #ddd;
+    width:400px;
+    height: 4px;
+    margin-bottom:3px;
+}
+.sign-up .h1{
+    margin-top: 4px;
+}
+
+.sign-up p{
+    /* font-family: 'Dancing Script', cursive; */
+    font-size: 21px;
+    /* font-weight: bolder; */
+    margin: 0 0 21px 0;
+}
+
+
+
+
+#message{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(240, 28, 28);
+    /* font-weight: bold; */
+    font-family: cursive;
+    font-size: 21px;
+}
+
+.way{
+    margin-top: -15px;
+    
+}
+
+.way input{
+  margin: 10px;
+}
+
+.way .user , .way .craft{
+    color: #ddd;
+    font-size: 21px;
+    /* font-weight: bolder; */
+}
+.way .user:hover , .way .craft:hover{
+    color: #fff;
+}
+.way .user{
+    margin-right: 20px;
+}
+.way input[type="radio"]{
+    
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+

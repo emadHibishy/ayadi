@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%=pageTitle%></title>
+    <link rel='stylesheet' href='/assets/home&profile/font-awesome.min.css' />
+    <link rel="stylesheet" href="/assets/home&profile/bootstrap.min.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/body.css">
+    <link rel="stylesheet" href="/_includes/_generalCss/colors.css">
+    <link rel="stylesheet" href="/_includes/Navbar/css/navStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/css/blockStyle.css">
+    <link rel="stylesheet" href="/_includes/Theme Block/themes/red-theme.css">
+    <link rel="stylesheet" href="/profile/css/style.css">
+    <link rel="stylesheet" href="/profile/css/editProduct.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+
+</head>
+
+<body>
+    <!-- start Navbar -->
+    <%-include('../_includes/Navbar/homeNav.ejs')%>
+    <!----------------------------- END Navbar!!! -------------------------------------->
+
+    <div class="container">
+
+
+        <div class="row">
+            <div class=" offset-md-1 col-md-10 col-sm-12 col-xs-12 mt-4">
+                <!-- ------------------------ Making Post!!!!--------------------- -->
+                <div class=" offset-md-1 col-md-10 col-sm-12 col-xs-12">
+                    <div class="post-area">
+                        <div class="post-body">
+                            <form #makingPostForm role="form"
+                                action="/profile/editProduct"
+                                method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+                                <div class="post">
+                                    <div id="carouselExampleControls" class="post carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div id="imagePreview" class="post-height image-preview">
+                                                <img class="image-preview__image" src="" alt="Image Preview">
+                                                <span class="image-preview__defult-text">Image Preview</span>
+                                            </div>
+                                        </div>
+                                        <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                            data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                            data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a> -->
+                                    </div>
+                                </div>
+
+                                <div class="making-post-info">
+                                    <div class="flex-grow-1 d-flex align-items-center">
+                                        <img src="/<%=user.image%>" alt="<%= user.name %>">
+                                        <span><%= user.name %></span>
+                                    </div>
+                                    <!-- <a class="btn dropdown-toggle float-right" data-toggle="collapse"
+                                        href="#multiCollapseExample1" role="button" aria-expanded="false"
+                                        aria-controls="multiCollapseExample1">
+                                        <svg width="17" height="17" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M80 160l26.66-53.33L160 80l-53.33-26.67L80 0 53.33 53.33 0 80l53.33 26.67L80 160zm351.99 128l-26.66 53.33L351.99 368l53.33 26.67L431.99 448l26.66-53.33L511.98 368l-53.33-26.67L431.99 288zm-208-192l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zm208 96c8.84 0 16-7.16 16-16v-34.11L502.02 82c13.81-15.22 13.22-38.53-1.31-53.09l-17.66-17.63c-14.5-14.52-37.84-15.08-53-1.36L157.28 256H112c-8.84 0-16 7.16-16 16v39.28l-78.53 70.84-.06.05C6.72 391.86.38 405.69.04 420.12c-.37 14.44 5.28 28.58 15.5 38.81l37.53 37.52c9.87 9.92 23.5 15.55 37.5 15.55 22.17 0 35.57-13.37 39.28-17.47L402.78 192h29.21zM94.22 462.36c-.82.91-4.23 3.24-7.22.17l-37.53-37.52c-2.97-3.01-.73-6.44.16-7.27L455.49 51.61l4.91 4.88L94.22 462.36z"></path>
+                                        </svg>
+                                        Select Category
+                                    </a> -->
+                                    <!-- <div class="collapse multi-collapse" id="multiCollapseExample1"> -->
+                                    <div class="card card-body p-0">
+                                        <ul class="list-group">
+
+                                            <li>
+                                                <label>
+                                                    <input type="radio" value="Glass Painting" name="category">Glass
+                                                    Painting
+                                                    <span></span>
+                                                </label>
+                                            </li>
+                                            
+                                            <li>
+                                                <label>
+                                                    <input type="radio" value="Portrait" name="category">Portrait
+                                                    <span></span>
+                                                </label>
+                                            </li>
+
+                                            <li>
+                                                <label>
+                                                    <input type="radio" value="Crochet" name="category">Crochet
+                                                    <span></span>
+                                                </label>
+                                            </li>
+                                    </div>
+
+                                    <!-- </div> -->
+                                </div>
+
+
+                                <textarea name="describtion"
+                                    value="<%= product.describtion %>"
+                                    placeholder="Product Describtion. . ." rows="2" wrap="soft"
+                                    maxlength="280"></textarea>
+
+                                <div class="overflow-hidden mb-3 mt-2">
+                                    <!-- <input type="file" id="file" name="image" class="file" accept="image/*">
+                                    <label for="file" class="btn btn-outline-primary col-4 float-left ml-3">
+                                        <svg aria-hidden='true' style='width: 20px; height: 20px;' focusable='false'
+                                            data-prefix='far' data-icon='images' role='img' viewBox='0 0 576 512'
+                                            class='svg-inline--fa fa-images fa-w-18 fa-2x'>
+                                            <path fill='currentColor'
+                                                d='M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v48H54a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6v-10h48zm42-336H150a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6V86a6 6 0 0 0-6-6zm6-48c26.51 0 48 21.49 48 48v256c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h384zM264 144c0 22.091-17.909 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40zm-72 96l39.515-39.515c4.686-4.686 12.284-4.686 16.971 0L288 240l103.515-103.515c4.686-4.686 12.284-4.686 16.971 0L480 208v80H192v-48z'
+                                                class=''></path>
+                                        </svg>
+                                        Add Pictures..
+                                    </label> -->
+                                </div>
+
+
+                                <% if (editing) { %>
+                                <input type="hidden" value="<%= product.id %>" name="productId">
+                                <% } %>
+
+                                <div class="post-actions">
+                                    <button type="submit" class="d-inline-block btn edit-btn">
+                                        <svg width="15" height="15" viewBox="0 0 576 512">
+                                            <path fill="currentColor"
+                                                d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v48H54a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6v-10h48zm42-336H150a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6V86a6 6 0 0 0-6-6zm6-48c26.51 0 48 21.49 48 48v256c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h384zM264 144c0 22.091-17.909 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40zm-72 96l39.515-39.515c4.686-4.686 12.284-4.686 16.971 0L288 240l103.515-103.515c4.686-4.686 12.284-4.686 16.971 0L480 208v80H192v-48z">
+                                            </path>
+                                        </svg>
+                                        Post
+                                    </button>
+
+
+                                    <label for="file" class="d-inline-block btn btn-action">
+                                        <svg width="15" height="15" viewBox='0 0 576 512'>
+                                            <path fill='currentColor'
+                                                d='M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v48H54a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6v-10h48zm42-336H150a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6V86a6 6 0 0 0-6-6zm6-48c26.51 0 48 21.49 48 48v256c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h384zM264 144c0 22.091-17.909 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40zm-72 96l39.515-39.515c4.686-4.686 12.284-4.686 16.971 0L288 240l103.515-103.515c4.686-4.686 12.284-4.686 16.971 0L480 208v80H192v-48z'>
+                                            </path>
+                                        </svg>
+                                        Add Picture..
+                                    </label>
+                                    <input type="file" id="file" name="image" class="file" accept="image/*">
+
+                                    <!-- <div class="overflow-hidden mb-1"> -->
+                                    <span class="float-right ml-1">ج.م</span>
+                                    <input class="" type="" name="price"
+                                        value="<%= product.price %>"
+                                        placeholder="Product price" wrap="soft" maxlength="5">
+
+                                    <!-- </div> -->
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Start Theme Block-->
+    <%-include('../_includes/Theme Block/themeBlock.ejs')%>
+
+    <!-- Start Scroll To Top -->
+    <div id="scroll-top">
+        <i class="fa fa-chevron-up fa-3x"></i>
+    </div>
+
+
+    <script src="../assets/home&profile/js/jquery-3.3.1.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="../_includes/Theme Block/js/theme.js"></script>
+    <script src="/assets/home&profile/js/bootstrap.min.js"></script>
+    <script src="js/imagePreview.js"></script>
+</body>
+
+</html>
